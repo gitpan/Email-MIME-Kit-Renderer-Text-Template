@@ -1,0 +1,11 @@
+--- 
+abstract: render parts of your mail with Text::Template
+author: 
+  - Ricardo Signes <rjbs@cpan.org>
+generated_by: Dist::Zilla::Plugin::MetaYaml version 1.004
+license: perl
+name: Email-MIME-Kit-Renderer-Text-Template
+requires: 
+  Email::MIME::Kit: 2
+  Text::Template: 0
+version: 1.000
