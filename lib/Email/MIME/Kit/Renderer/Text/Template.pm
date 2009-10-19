@@ -1,5 +1,5 @@
 package Email::MIME::Kit::Renderer::Text::Template;
-our $VERSION = '1.092920';
+our $VERSION = '1.092921';
 
 
 use Moose;
@@ -38,6 +38,8 @@ sub render  {
     BROKEN => sub { die shift },
   );
 
+  die $Text::Template::ERROR unless defined $result;
+
   return \$result;
 }
 
@@ -56,7 +58,7 @@ Email::MIME::Kit::Renderer::Text::Template - render parts of your mail with Text
 
 =head1 VERSION
 
-version 1.092920
+version 1.092921
 
 =head1 AUTHOR
 

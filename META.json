@@ -7,7 +7,7 @@
       "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
    },
    "generated_by" : "Dist::Zilla version 1.092850",
-   "version" : "1.092920",
+   "version" : "1.092921",
    "name" : "Email-MIME-Kit-Renderer-Text-Template",
    "author" : [
       "Ricardo Signes <rjbs@cpan.org>"
