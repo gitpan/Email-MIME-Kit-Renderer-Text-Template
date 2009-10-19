@@ -1,5 +1,6 @@
 package Email::MIME::Kit::Renderer::Text::Template;
-our $VERSION = '1.000';
+our $VERSION = '1.092920';
+
 
 use Moose;
 with 'Email::MIME::Kit::Role::Renderer';
@@ -33,7 +34,8 @@ sub render  {
   my $result = Text::Template::fill_in_string(
     $$input_ref,
     %{ $self->{template_args} || {} },
-    HASH => $hash,
+    HASH   => $hash,
+    BROKEN => sub { die shift },
   );
 
   return \$result;
@@ -41,9 +43,12 @@ sub render  {
 
 1;
 
-__END__
+
+
 
 =pod
+
+=pod 
 
 =head1 NAME
 
@@ -51,7 +56,7 @@ Email::MIME::Kit::Renderer::Text::Template - render parts of your mail with Text
 
 =head1 VERSION
 
-version 1.000
+version 1.092920
 
 =head1 AUTHOR
 
@@ -62,8 +67,20 @@ version 1.000
 This software is copyright (c) 2009 by Ricardo Signes.
 
 This is free software; you can redistribute it and/or modify it under
-the same terms as perl itself.
+the same terms as the Perl 5 programming language system itself.
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2009 by Ricardo Signes.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut 
+
+
+
+__END__
+
 
 
