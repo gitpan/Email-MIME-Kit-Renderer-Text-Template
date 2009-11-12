@@ -1,5 +1,5 @@
 package Email::MIME::Kit::Renderer::Text::Template;
-our $VERSION = '1.092921';
+our $VERSION = '1.093160';
 
 
 use Moose;
@@ -31,7 +31,7 @@ sub render  {
     (map {; $_ => ref $args->{$_} ? $args->{$_} : \$args->{$_} } keys %$args),
   });
 
-  my $result = Text::Template::fill_in_string(
+  my $result = Text::Template->fill_this_in(
     $$input_ref,
     %{ $self->{template_args} || {} },
     HASH   => $hash,
@@ -47,10 +47,7 @@ sub render  {
 
 
 
-
 =pod
-
-=pod 
 
 =head1 NAME
 
@@ -58,7 +55,15 @@ Email::MIME::Kit::Renderer::Text::Template - render parts of your mail with Text
 
 =head1 VERSION
 
-version 1.092921
+version 1.093160
+
+=head1 NAME
+
+Email::MIME::Kit::Renderer::Text::Template - render parts of your mail with Text::Template
+
+=head1 VERSION
+
+version 1.093160
 
 =head1 AUTHOR
 
@@ -71,6 +76,10 @@ This software is copyright (c) 2009 by Ricardo Signes.
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
+=head1 AUTHOR
+
+Ricardo Signes <rjbs@cpan.org>
+
 =head1 COPYRIGHT AND LICENSE
 
 This software is copyright (c) 2009 by Ricardo Signes.
@@ -78,11 +87,8 @@ This software is copyright (c) 2009 by Ricardo Signes.
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
-=cut 
-
+=cut
 
 
 __END__
-
-
 

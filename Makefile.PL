@@ -9,7 +9,7 @@ WriteMakefile(
   NAME      => 'Email::MIME::Kit::Renderer::Text::Template',
   AUTHOR    => "Ricardo\ Signes\ \<rjbs\@cpan\.org\>",
   ABSTRACT  => "render\ parts\ of\ your\ mail\ with\ Text\:\:Template",
-  VERSION   => '1.092921',
+  VERSION   => '1.093160',
   EXE_FILES => [ qw() ],
   (eval { ExtUtils::MakeMaker->VERSION(6.31) } ? (LICENSE => 'perl') : ()),
   PREREQ_PM    => {

@@ -1,13 +1,13 @@
 {
    "resources" : {
-      "repository" : "http://github.com/rjbs/email-mime-kit-renderer-text-template/tree"
+      "repository" : "http://github.com/rjbs/email-mime-kit-renderer-text-template"
    },
    "meta-spec" : {
       "version" : 1.4,
       "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
    },
-   "generated_by" : "Dist::Zilla version 1.092850",
-   "version" : "1.092921",
+   "generated_by" : "Dist::Zilla version 1.093000",
+   "version" : "1.093160",
    "name" : "Email-MIME-Kit-Renderer-Text-Template",
    "author" : [
       "Ricardo Signes <rjbs@cpan.org>"
@@ -19,3 +19,4 @@
    },
    "abstract" : "render parts of your mail with Text::Template"
 }
+
