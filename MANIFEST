@@ -2,6 +2,7 @@ Changes
 LICENSE
 MANIFEST
 META.json
+META.yml
 Makefile.PL
 README
 dist.ini
@@ -10,5 +11,4 @@ t/assemble.t
 t/kits/fail.mkit/manifest.json
 t/kits/fail2.mkit/manifest.json
 t/kits/test.mkit/manifest.json
-t/release-pod-coverage.t
 t/release-pod-syntax.t

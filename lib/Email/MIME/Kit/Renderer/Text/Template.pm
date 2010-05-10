@@ -1,7 +1,7 @@
 package Email::MIME::Kit::Renderer::Text::Template;
-our $VERSION = '1.093160';
-
-
+BEGIN {
+  $Email::MIME::Kit::Renderer::Text::Template::VERSION = '1.101300';
+}
 use Moose;
 with 'Email::MIME::Kit::Role::Renderer';
 # ABSTRACT: render parts of your mail with Text::Template
@@ -35,7 +35,7 @@ sub render  {
     $$input_ref,
     %{ $self->{template_args} || {} },
     HASH   => $hash,
-    BROKEN => sub { die shift },
+    BROKEN => sub { my %hash = @_; die $hash{error}; },
   );
 
   die $Text::Template::ERROR unless defined $result;
@@ -45,8 +45,7 @@ sub render  {
 
 1;
 
-
-
+__END__
 =pod
 
 =head1 NAME
@@ -55,15 +54,7 @@ Email::MIME::Kit::Renderer::Text::Template - render parts of your mail with Text
 
 =head1 VERSION
 
-version 1.093160
-
-=head1 NAME
-
-Email::MIME::Kit::Renderer::Text::Template - render parts of your mail with Text::Template
-
-=head1 VERSION
-
-version 1.093160
+version 1.101300
 
 =head1 AUTHOR
 
@@ -71,24 +62,10 @@ version 1.093160
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2009 by Ricardo Signes.
-
-This is free software; you can redistribute it and/or modify it under
-the same terms as the Perl 5 programming language system itself.
-
-=head1 AUTHOR
-
-Ricardo Signes <rjbs@cpan.org>
-
-=head1 COPYRIGHT AND LICENSE
-
-This software is copyright (c) 2009 by Ricardo Signes.
+This software is copyright (c) 2010 by Ricardo Signes.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
-
-__END__
 
