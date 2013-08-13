@@ -1,6 +1,6 @@
 package Email::MIME::Kit::Renderer::Text::Template;
 {
-  $Email::MIME::Kit::Renderer::Text::Template::VERSION = '1.101301';
+  $Email::MIME::Kit::Renderer::Text::Template::VERSION = '1.101302';
 }
 use Moose;
 with 'Email::MIME::Kit::Role::Renderer';
@@ -67,7 +67,7 @@ Email::MIME::Kit::Renderer::Text::Template - render parts of your mail with Text
 
 =head1 VERSION
 
-version 1.101301
+version 1.101302
 
 =head1 ATTRIBUTES
 
@@ -87,7 +87,7 @@ Ricardo Signes <rjbs@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Ricardo Signes.
+This software is copyright (c) 2013 by Ricardo Signes.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
